@@ -27,7 +27,7 @@ class _CategoryMealScreenState extends State<CategoryMealScreen> {
     final categoryId = routeArg['id'];
     categoryTitle = routeArg['title'];
     /*    */
-    displayedMeals=DUMMY_MEALS.where((meal){
+    displayedMeals=widget._availableMeals.where((meal){
       return meal.categories.contains(categoryId);
     }).toList();    super.didChangeDependencies();
   }
